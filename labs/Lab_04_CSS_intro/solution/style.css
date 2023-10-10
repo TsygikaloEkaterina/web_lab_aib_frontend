@@ -1,0 +1,64 @@
+ html, body {
+ margin:0;
+ width: 100%;
+ height: 100%;
+}
+        h1 {
+        font-size: 40px;
+        color: White;
+        font-family: William, serif;
+        font-weight: normal;
+        }
+        h2 {
+        font-size: 45px;
+        color: White;
+        font-family: Inter, sans-serif;
+        }
+         h4 {
+        font-size: 16px;
+        color: Black;
+        font-family: Inter, sans-serif;
+        margin-top:10px;
+        font-weight: normal;
+        }
+        h3{
+        font-size: 16px;
+        color: Black;
+        font-family: Inter, sans-serif;
+        font-weight: normal;
+        text-transform: uppercase;
+        }
+body {
+background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+}
+.Head_bar
+{
+width:100%;
+height:500px;
+text-align:center;
+margin
+}
+img
+{
+margin-top:20px;
+width:350px;
+}
+h4, h3, h2, h1 {
+margin: 0;
+}
+.mt-100 {
+margin-top:10px;
+border: 1px solid #000;
+font-weight: 900;
+padding:10px 25px;
+font-size: 18px;
+text-transform: uppercase;
+background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+cursor: pointer;
+}
+.text_af_div
+{
+margin-top:80px;
+}
+
+
