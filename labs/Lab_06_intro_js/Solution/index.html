@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS</title>
+</head>
+<body>
+<script>
+      function task_1() {
+        /*
+      Обьявляем переменную с помощью оператора let
+      Операторы доступные для обьявления переменных: let,var,const
+      const не позволяет именять значение переменных
+      Функция alert() в JavaScript используется для вывода сообщения
+      в модальном окне браузера.
+      console.log() тспользуется для отладки кода или проверки значения переменных
+      */
+        function generateRandomString(length) {
+          //Генерация рандомной строки
+          let result = "";
+          const characters = "abcdefghijklmnopqrstuvwxyz";
+          const charactersLength = characters.length;
+
+          for (let i = 0; i < length; i++) {
+            result += characters.charAt(
+              Math.floor(Math.random() * charactersLength)
+            );
+          }
+          return result;
+        }
+        //Работа с переменными
+        let apple = 10;
+        let condition = generateRandomString(10);
+        alert(apple);
+        console.log(apple);
+        alert("Good game is " + condition);
+      }
+      //Магия конкатенации
+      function task_2() {
+        let digit = 9;
+        let letter = "100";
+        let bool = true;
+        console.log(digit + letter + bool);
+        console.log(digit + bool + letter);
+        console.log(letter + digit + bool);
+        console.log(letter + bool + digit);
+        console.log(bool + letter + digit);
+        console.log(bool + digit + letter);
+      }
+      //Работа с массивами
+      function task_3() {
+        const length = 10;
+        const min = -10;
+        const max = 10;
+        let array = [length];
+        for (let i = 0; i < length; i++) {
+          array.push(Math.floor(Math.random() * 21) - 10);
+        }
+        var newArray = array.filter(function (element) {
+          return element > 0;
+        });
+        console.log(array); //массив до который допускает числа меньше 0
+        console.log(newArray); // массив, где числа только больше 0
+      }
+      //Работа с функциями
+      function task_4() {
+        function getRandomNumber() {
+          return Math.floor(Math.random() * 21) - 10;
+        }
+
+        console.log(getRandomNumber());
+
+        function multiplyArrayByNumber(arr, number) {
+          let result = [];
+          for (let i = 0; i < arr.length; i++) {
+            result.push(arr[i] * number);
+          }
+          return result;
+        }
+
+        let array = [1, 2, 3, 4, 5];
+        let number = 2;
+        console.log(multiplyArrayByNumber(array, number));
+
+        let generateRandomWord = function () {
+          let word = "";
+          let characters = "abcdefghijklmnopqrstuvwxyz";
+          let length = Math.floor(Math.random() * 10) + 1;
+          for (let i = 0; i < length; i++) {
+            let randomIndex = Math.floor(Math.random() * characters.length);
+            word += characters.charAt(randomIndex);
+          }
+          return word;
+        };
+
+        console.log(generateRandomWord());
+      }
+      //Работа с объектами
+      function tast_5() {
+        let person = {};
+        person.firstName = "John";
+        person.surname = "Dig";
+        person.patronymic = "Smith";
+        person.birthday = "01/01/1990";
+        person.hobby = "reading";
+        person.group = "A";
+        person.getInfo = function () {
+          let fullName =
+            this.surname + " " + this.firstName + " " + this.patronymic;
+          let age =
+            new Date().getFullYear() - new Date(this.birthday).getFullYear();
+          return (
+            fullName +
+            ", " +
+            this.birthday +
+            ", " +
+            this.hobby +
+            ", " +
+            age +
+            " years old"
+          );
+        };
+        alert(person.getInfo());
+        let salaries = {
+          Smith: 50000,
+          Johnson: 60000,
+          Williams: 55000,
+          Jones: 65000,
+          Brown: 70000,
+          Davis: 45000,
+          Miller: 55000,
+          Wilson: 60000,
+          Moore: 50000,
+          Taylor: 55000,
+        };
+        let totalSalary = 0;
+        for (let key in salaries) {
+          totalSalary += salaries[key];
+        }
+        console.log(totalSalary);
+      }
+      task_1();
+      task_2();
+      task_3();
+      task_4();
+      tast_5();
+    </script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+<body>
+<script>
+//Задание 1. level stone
+      function tast_1() {
+        let firstValue = prompt("var one");
+        let secondValue = prompt("var two");
+        let spescialWorld = "World";
+        if (firstValue === secondValue) {
+          console.log("value equally");
+        } else {
+          console.log("value not equally");
+        }
+        firstValue += spescialWorld;
+      }
+      //Задание №2. level iron
+      function task_2() {
+        function print() {}
+        let objectsArray = [
+          { name: "apple", color: "green" },
+          { name: "strawberry", color: "red" },
+          { name: "blueberry", color: "blue" },
+          { name: "raspberry", color: "light red" },
+          { name: "lemon", color: "yellow" },
+        ];
+        for (let i = 0; i < objectsArray.length; i++) {
+          switch (objectsArray[i].name) {
+            case "apple":
+              console.log(objectsArray[i].name + " " + objectsArray[i].color);
+              break;
+            case "strawberry":
+              console.log(objectsArray[i].name + " " + objectsArray[i].color);
+              break;
+            case "blueberry":
+              console.log(objectsArray[i].name + " " + objectsArray[i].color);
+              break;
+            case "raspberry":
+              console.log(objectsArray[i].name + " " + objectsArray[i].color);
+              break;
+            case "lemon":
+              console.log(objectsArray[i].name + " " + objectsArray[i].color);
+              break;
+          }
+        }
+      }
+      //Задание 3. level gold
+      function task_3() {
+        let employees;
+        let salary;
+        while (!employees || !salary) {
+          employees = prompt("Введите количество сотрудников:");
+          salary = prompt("Введите зарплату на одного человека:");
+        }
+        employees = employees.replace(/\D/g, "");
+        salary = salary.replace(/\D/g, "");
+        alert("Затраты на зарплату сотрудников: " + employees * salary);
+      }
+      function task_4() {
+        const student = [
+          { FIO: "Петров А.А.", mark: 5 },
+          { FIO: "Иванов Б.Б.", mark: 3.4 },
+          { FIO: "Сидоров Г.Г.", mark: 9 },
+          { FIO: "Немолодой Д.Д", mark: 2 },
+          { FIO: "Молодой Е.Е", mark: 3.4 },
+        ];
+        //Задание 4
+        let sum = 0;
+        let count = 0;
+        let badStudent = [];
+
+        for (let i = 0; i < student.length; i++) {
+          const mark = student[i].mark;
+          if (mark < 4) {
+            badStudent.push(student[i]);
+          }
+          sum += mark;
+          count++;
+        }
+        let averageMark = sum / count;
+        console.log("Средняя оценка: " + averageMark);
+        console.log("Плохие студенты:");
+        if (badStudent.length === 0) {
+          console.log("Таких нет");
+        } else {
+          badStudent.forEach((znachenie) => {
+            console.log(
+              "Фио: " + znachenie.FIO + "; Оценка: " + znachenie.mark
+            );
+          });
+        }
+      }
+      tast_1();
+      task_2();
+      task_3();
+      task_4();
+    </script>
+</body>
+</html>
